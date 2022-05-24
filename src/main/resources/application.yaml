@@ -1,0 +1,32 @@
+
+server:
+  port: 8990
+  name: Chat server API
+  time-zone: "Europe/Moscow"
+
+spring:
+  datasource:
+    url: *
+    username: *
+    password: *
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  profiles:
+    active: dev
+
+auth:
+  server:
+    base:
+      url: *
+    time:
+      out: 1500
+
+jwt:
+  access:
+    secret: *
+    expiration:
+      second: *
+
+origins-front: *
